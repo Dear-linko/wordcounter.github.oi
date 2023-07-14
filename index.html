@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      WordCounter - Word Count &amp; Character Counter
+    </title>
+    <meta
+      name="keywords"
+      content="word counter,word count,wordcounter,words counter,character counter,word count in word,Word count online,word count tool"
+    />
+    <meta
+      name="description"
+      content="word counter,word count,wordcounter,words counter,character counter,word count in word,Word count online,word count tool."
+    />
+    <link rel="stylesheet" href="mystyles.css" />
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-head">
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <a class="navbar-item"
+                ><img src="logo.png" alt="Logo" />
+              </a>
+              <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+                <span></span> <span></span> <span></span>
+              </span>
+            </div>
+            <div id="navbarMenuHeroA" class="navbar-menu">
+              <div class="navbar-end">
+                <a
+                  class="navbar-item is-active"
+                  href="https://wordcounter.usefultool.net/"
+                >
+                  Home
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <hr class="navbar-divider" />
+      </div>
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns">
+            <div class="column is-three-fifths-desktop is-narrow">
+              <h1 class="title is-info is-4">Word Count Online</h1>
+              <h2 class="subtitle is-info is-6">wordcounter.usefultool.net</h2>
+              <div class="field is-horizontal is-info">
+                <div class="field-body is-info">
+                  <div class="field">
+                    <div class="control">
+                      <textarea
+                        class="textarea is-focused"
+                        placeholder="Start typing, or copy and paste your document here..."
+                        rows="12"
+                        id="content"
+                        autofocus
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="buttons is-right">
+                <button
+                  class="button is-primary is-rounded is-small"
+                  type="reset"
+                  value="reset"
+                  name="reset"
+                  onclick="resetForm()"
+                >
+                  Clear!
+                </button>
+              </div>
+              <div class="field is-grouped is-grouped-multiline" id="copyArea">
+                <span class="tag is-medium">Details:</span>
+                <div class="control">
+                  <div class="tags has-addons">
+                    <span class="tag is-dark is-medium" id="zifu">0</span>
+                    <span class="tag is-primary is-medium">Words</span>
+                  </div>
+                </div>
+                <div class="control">
+                  <div class="tags has-addons">
+                    <span class="tag is-dark is-medium" id="zishu">0</span>
+                    <span class="tag is-primary is-medium">Characters</span>
+                  </div>
+                </div>
+                <div class="control">
+                  <div class="tags has-addons">
+                    <span class="tag is-dark is-medium" id="count_paragraphs"
+                      >0</span
+                    >
+                    <span class="tag is-primary is-medium">Paragraphs</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tile is-ancestor">
+            <div class="tile is-parent">
+              <article class="tile is-child box">
+                <p class="title is-5 is-spaced">What is the word count tool for?</p>
+                <p class="is-6">
+                  The online word count query tool can easily count the number of characters. And can count the number of words, characters and paragraphs respectively.
+                </p>
+              </article>
+            </div>
+            <div class="tile is-parent">
+              <article class="tile is-child box">
+                <p class="title is-5 is-spaced">How to use the word count tool?</p>
+                <p class="is-6">1. Input or paste the content to be counted in the input box.</p>
+                <p class="is-6">
+                  2. The detailed word count results will be displayed below the character input box.
+                </p>
+              </article>
+            </div>
+            <div class="tile is-parent">
+              <article class="tile is-child box">
+                <p class="title is-5">Word Counter</p>
+                <form name="calculator">
+                  <table class="table is-bordered">
+                    <thead>
+                      <tr>
+                        <td>
+                          <input
+                            id="display"
+                            type="text"
+                            name="display"
+                            readonly
+                            class="input is-rounded has-text-right"
+                            placeholder="0"
+                          />
+                        </td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="buttons are-small">
+                            <button
+                              class="button is-rounded"
+                              type="button"
+                              value="7"
+                              onclick="calculator.display.value += '7'"
+                            >
+                              7
+                            </button>
+                            <button
+                              class="button is-rounded"
+                              type="button"
+                              value="8"
+                              onclick="calculator.display.value += '8'"
+                            >
+                              8
+                            </button>
+                            <button
+                              class="button is-rounded"
+                              type="button"
+                              value="9"
+                              onclick="calculator.display.value += '9'"
+                            >
+                              9
+                            </button>
+                            <button
+                              class="button is-rounded"
+                              type="button"
+                              value="+"
+                              onclick="calculator.display.value += '+'"
+                            >
+                              +
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="buttons are-small">
+                            <button
+                              class="button is-rounded"
+                              type="button"
+                              value="4"
+                              onclick="calculator.display.value += '4'"
+                            >
+                              4
+                            </button>
+                            <button
+                              class="button is-rounded"
+                              type="button"
+                              value="5"
+                              onclick="calculator.display.value += '5'"
+                            >
+                              5
+                            </button>
+                            <button
+                              class="button is-rounded"
+                              type="button"
+                              value="6"
+                              onclick="calculator.display.value += '6'"
+                            >
+                              6
+                            </button>
+                            <button
+                              class="button is-rounded"
+                              type="button"
+                              value="-"
+                              onclick="calculator.display.value += '-'"
+                            >
+                              -
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="buttons are-small">
+                            <button
+                              class="button is-rounded"
+                              type="button"
+                              value="1"
+                              onclick="calculator.display.value += '1'"
+                            >
+                              1
+                            </button>
+                            <button
+                              class="button is-rounded"
+                              type="button"
+                              value="2"
+                              onclick="calculator.display.value += '2'"
+                            >
+                              2
+                            </button>
+                            <button
+                              class="button is-rounded"
+                              type="button"
+                              value="3"
+                              onclick="calculator.display.value += '3'"
+                            >
+                              3
+                            </button>
+                            <button
+                              class="button is-rounded"
+                              type="button"
+                              value="*"
+                              onclick="calculator.display.value += '*'"
+                            >
+                              *
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="buttons are-small">
+                            <button
+                              class="button is-rounded"
+                              type="button"
+                              value="C"
+                              onclick="calculator.display.value = ''"
+                            >
+                              C
+                            </button>
+                            <button
+                              class="button is-rounded"
+                              type="button"
+                              value="0"
+                              onclick="calculator.display.value += '0'"
+                            >
+                              0
+                            </button>
+                            <button
+                              class="button is-rounded"
+                              type="button"
+                              value="="
+                              onclick="calculator.display.value = eval(calculator.display.value)"
+                            >
+                              =
+                            </button>
+                            <button
+                              class="button is-rounded"
+                              type="button"
+                              value="/"
+                              onclick="calculator.display.value += '/'"
+                            >
+                              /
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </form>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-foot px-5">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+          <div class="container">
+            <ul>
+              <li class="is-active">
+                <a
+                  href="https://wordcounter.usefultool.net/"
+                  aria-current="page"
+                  >Word Count</a
+                >
+              </li>
+              <li>
+                <a href="https://wordcounter.usefultool.net/">Word Counter</a>
+              </li>
+              <li>
+                <a href="https://wordcounter.usefultool.net/"
+                  >Word Count Online</a
+                >
+              </li>
+              <li>
+                <a href="https://wordcounter.usefultool.net/">Wordcounter</a>
+              </li>
+              <li>
+                <a href="https://wordcounter.usefultool.net/"
+                  >Word Count Tool</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <hr class="navbar-divider" />
+      </div>
+    </section>
+    <noscript> Sorry, your browser does not support JavaScript! </noscript>
+    <script src="script.js"></script>
+  </body>
+</html>
